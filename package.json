@@ -1,0 +1,26 @@
+{
+  "name": "graphql-react",
+  "version": "1.0.0",
+  "description": "Project to practice the Graphql with react",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com-junip:junipdewan/graphql-react.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@apollo/react-hooks": "^3.1.5",
+    "@types/react": "^16.9.35",
+    "apollo-boost": "^0.4.9",
+    "graphql": "^15.0.0",
+    "node-sass": "^4.14.1",
+    "parcel-bundler": "^1.12.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
