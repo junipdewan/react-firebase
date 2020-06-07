@@ -1,2 +1,2 @@
-# graphql-react
-Project to practice the Graphql with react 
+# React-Firebase 
+Firebase Integration with React (Basic signup/login flow)
