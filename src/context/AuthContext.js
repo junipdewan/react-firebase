@@ -1,21 +1,28 @@
 import React, { useEffect, useState } from 'react';
-import authConfig from '../Firebase/config'
+import app from '../firebase/config'
 
 export const AuthContext = React.createContext();
-
 export const AuthProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState(null);
   const [pending, setPending] = useState(true);
 
   useEffect(() => {
-    authConfig.auth().onAuthStateChanged((user) => {
-      setCurrentUser(user)
-      setPending(false)
+    app.auth().onAuthStateChanged((user) => {
+      setPending(true)
+      if (user) {
+        console.log("__",user)
+        setCurrentUser(user)
+        setPending(false)
+      } else {
+        console.log("err",user)
+        setCurrentUser(null)
+        setPending(false)
+      }
     });
   }, []);
 
   if(pending){
-    return <>Loading...</>
+    return <>Verifying Login.....</>
   }
 
   return (

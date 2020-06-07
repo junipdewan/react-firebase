@@ -1,21 +1,19 @@
-// Firebase App (the core Firebase SDK) is always required and
-// must be listed before other Firebase SDKs
 import * as firebase from "firebase/app";
 
 // Add the Firebase services that you want to use
 import "firebase/auth";
 
 const config = {
-  apiKey: "AIzaSyAcPbOBP9js9jC6LGtm9ZjqwXjVpQjBQxM",
-  authDomain: "react-firebase-fc06e.firebaseapp.com",
-  databaseURL: "https://react-firebase-fc06e.firebaseio.com",
-  projectId: "react-firebase-fc06e",
-  storageBucket: "react-firebase-fc06e.appspot.com",
-  messagingSenderId: "564100058598",
-  appId: "1:564100058598:web:8c6ebd5ba04dc4faab1a27",
-  measurementId: "G-GZNMEDXZPH"
+  apiKey: process.env.FIREBASE_API_KEY,
+  authDomain: process.env.FIREBASE_AUTH_DOMAIN,
+  databaseURL: process.env.FIREBASE_DATABASE_URL,
+  projectId: process.env.FIREBASE_PROJECT_ID,
+  storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.FIREBASE_APP_ID,
+  measurementId: process.env.FIREBASE_MESUREMENT_ID
 };
 
-firebase.initializeApp(config)
+const app = firebase.initializeApp(config)
 
-export default config;
+export default app;

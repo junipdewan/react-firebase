@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import app from '../firebase/config';
+import { useHistory } from 'react-router-dom';
 
 const Register  = () => {
-
+  let history = useHistory()
   const [email, setEmail] = useState('')
   const [pass, setPass] = useState('')
 
@@ -14,9 +16,19 @@ const Register  = () => {
     }
   }
 
-
   const registerUser = () => {
-    
+    app.auth().createUserWithEmailAndPassword(email, pass).then((response) => {
+      if(response) {
+        console.log("----",response)
+        history.push('/login')
+      }
+    }).catch(function(error) {
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      // ...
+      console.log(errorMessage, errorCode);
+    })
   }
 
   return(
@@ -29,10 +41,9 @@ const Register  = () => {
       <label>Password</label>
       <input name="password" type="password" onChange={(e) => onInputChange(e, 'pass')}></input>
     </div>
-    <button className="form-row">
-      Login
+    <button className="form-row" onClick={registerUser}>
+      Register
     </button>
-   
   </div>)
 }
 
