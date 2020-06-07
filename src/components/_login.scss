@@ -1,0 +1,8 @@
+.form-container {
+  .button-container {
+    display: block;
+    button:nth-child(2) {
+      margin-left: 16px;
+    }
+  }
+}

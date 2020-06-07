@@ -1,4 +1,4 @@
-# React-Firebase 
+# React-Firebase :rocket:
 Firebase Integration with React (Basic signup/login flow)
 <p align="center">
   <img width="600" height="300" src="./static/react-firebase.jpg">
@@ -10,6 +10,13 @@ Firebase Integration with React (Basic signup/login flow)
   <a href="https://github.com/junipdewan/githunt/blob/master/license.md">
     <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="license-mit" />
   </a>
+</p>
+
+<p align="center">
+  <img width="600" height="600" src="./static/login-register.jpg">
+  <div align="center">
+    UI design use to login/register flow
+  </div>
 </p>
 
 # Setup
@@ -54,8 +61,9 @@ npm run dev
 [MIT]() junipdewan
 
 
-## ToDo
+## To do
 
-- [ ] Better UI for signup/register
-
-## 
+- [x] Better UI for signup/register
+- [ ] Error handling in forms
+- [ ] Add Firebase admin SDK
+- [ ] Register User using Name & phone number

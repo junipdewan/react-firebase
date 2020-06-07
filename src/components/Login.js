@@ -34,22 +34,31 @@ const Login  = () => {
   }
 
   return (
-    <div className="form">
-      <div className="form-row">
-        <label>Email</label>
-        <input name="email" onChange={(e) => onInputChange(e,'email')}></input>
-      </div>
-      <div className="form-row">
-        <label>Password</label>
-        <input name="password" type="password" onChange={(e) => onInputChange(e, 'pass')}></input>
-      </div>
-      <button className="form-row" onClick={loginUser}>
-        Login
-      </button>
-      <button className="form-row" onClick={registerUser}>
-        Register
-      </button>
-    </div>
+    <div className="form-container">
+      <div className="form">
+        <div className="form-content">
+          <div className="form-row">
+            <label>Email</label>
+            <input name="email" onChange={(e) => onInputChange(e,'email')}></input>
+          </div>
+          <div className="form-row">
+            <label>Password</label>
+            <input name="password" type="password" onChange={(e) => onInputChange(e, 'pass')}></input>
+          </div>
+          <div className="form-row">
+            <div className="button-container">
+              <button className="btn btn-primary" onClick={loginUser}>
+                Login
+              </button>
+              <button className="btn btn-success" onClick={registerUser}>
+                Register
+              </button>
+            </div>
+          </div>
+        </div> 
+        
+      </div> 
+    </div> 
   )
 }
 
