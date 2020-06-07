@@ -19,15 +19,12 @@ const Register  = () => {
   const registerUser = () => {
     app.auth().createUserWithEmailAndPassword(email, pass).then((response) => {
       if(response) {
-        console.log("----",response)
         history.push('/login')
       }
     }).catch(function(error) {
-      // Handle Errors here.
       var errorCode = error.code;
       var errorMessage = error.message;
-      // ...
-      console.log(errorMessage, errorCode);
+      console.error(errorMessage, errorCode);
     })
   }
 

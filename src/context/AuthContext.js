@@ -10,11 +10,9 @@ export const AuthProvider = ({ children }) => {
     app.auth().onAuthStateChanged((user) => {
       setPending(true)
       if (user) {
-        console.log("__",user)
         setCurrentUser(user)
         setPending(false)
       } else {
-        console.log("err",user)
         setCurrentUser(null)
         setPending(false)
       }

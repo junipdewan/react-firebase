@@ -1,7 +1,7 @@
 {
-  "name": "graphql-react",
+  "name": "react-firebase",
   "version": "1.0.0",
-  "description": "Project to practice the Graphql with react",
+  "description": "React + Firebase Authentications",
   "main": "index.js",
   "scripts": {
     "dev": "parcel src/index.html --open --port 5050",
@@ -9,16 +9,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com-junip:junipdewan/graphql-react.git"
+    "url": "git@github.com-junip:junipdewan/react-firebase.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Junip Dewan<junipd2@gmail.com>",
+  "license": "MIT",
   "dependencies": {
-    "@apollo/react-hooks": "^3.1.5",
-    "@types/react": "^16.9.35",
-    "apollo-boost": "^0.4.9",
     "firebase": "^7.15.0",
-    "graphql": "^15.0.0",
     "node-sass": "^4.14.1",
     "parcel-bundler": "^1.12.4",
     "react": "^16.13.1",

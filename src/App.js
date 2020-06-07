@@ -5,19 +5,15 @@ import {
   Route,
 } from "react-router-dom";
 
+
+import PrivateRoute from '../src/Routes/PrivateRoute'
+import { AuthProvider } from './context/AuthContext'
+
 // paths
 import Login from './components/Login'
 import Register from './components/Register'
 import AuthenticatedApp from './components/AuthenticatedApp'
 import './scss/main.scss'
-
-import PrivateRoute from '../src/Routes/PrivateRoute'
-
-import { AuthProvider } from './context/AuthContext'
-
-// const client = new ApolloClient({
-//   uri: 'https://countries-274616.ew.r.appspot.com/'
-// })
 
 const App = () => {
 

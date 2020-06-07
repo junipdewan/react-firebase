@@ -9,10 +9,9 @@ const AuthenticatedApp = () => {
 const logOut = () => {
 
   app.auth().signOut().then((response) => {
-    console.log(response)
     history.push('/login');
   }).catch((error) =>{
-    console.log(error)
+    console.error(error)
   })
 }
 
